@@ -1,0 +1,25 @@
+{% extends "CarpetaBase/Base.html" %}
+
+{% block title %}
+<title>Usuarios</title>
+{% endblock title %}
+
+
+
+{% block h1_header %} Usuarios {% endblock h1_header %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+        {{formulario}}
+    <input type="submit" value="Crear"/>
+</form>
+{% endblock main %}
+
+<ul>
+    {% for usuario in usuario_encontrado %}
+        <li>
+            {{usuario}}
+        </li>
+    {% endfor %}
+</ul>

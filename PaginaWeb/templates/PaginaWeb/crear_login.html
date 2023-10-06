@@ -1,0 +1,25 @@
+{% extends "CarpetaBase/Base.html" %}
+
+{% block title %}
+<title>Crear LogIn</title>
+{% endblock title %}
+
+
+
+{% block h1_header %}
+Crear LogIn
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{formulario}}
+    </table>
+    <input type="submit" value="Crear"/>
+
+</form>
+
+
+{% endblock main %}
